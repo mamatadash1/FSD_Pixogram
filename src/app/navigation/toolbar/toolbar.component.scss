@@ -1,0 +1,50 @@
+.pixogram-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  color: #fff;
+  background-color: black;
+}
+
+$pixogram-toolbar-title-padding: 16px !default;
+
+.toolbar-title {
+  margin: 0 $pixogram-toolbar-title-padding 0 $pixogram-toolbar-title-padding;
+}
+
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+
+  // vertical-align: middle;
+}
+
+.mat-tab-labels {
+  justify-content: center;
+  margin-top: 60px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+}
+.mat-button-bg-active {
+  background-color: #283fb1;
+  background: #283fb1;
+  color: #00ffad;
+  border: #00ffad;
+  margin: 1px;
+}
+
+.mat-button-bg-notactive {
+  background-color: #00b8ff;
+  background: #00b8ff;
+  color: #fff;
+  border: #00ffad;
+  margin: 1px;
+}
+.button{}

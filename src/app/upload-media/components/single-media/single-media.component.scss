@@ -1,0 +1,39 @@
+.browse{
+    width: 33%;
+}
+.drag-container{
+    width: 300px;
+    height: 300px;
+    border: dashed 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 0;
+}
+
+.img-video-div video, .img-video-div img{
+    height: 100%;
+    width: 100%;
+}
+.img-video-div{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+  }
+
+  .custom{
+	width: 300px;
+	height: 300px;
+}
+
+.dropzone {
+    min-height: 400px;
+    min-width: 400px;
+    display: table;
+    width: 100%;
+    background-color: #eee;
+    border: dotted 1px #aaa;
+  }
+  

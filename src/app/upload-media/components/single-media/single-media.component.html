@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="custom-file">
+                        <input type="file" accept="image/*,video/*" class="custom-file-input" id="customFile"
+                            (change)="onSelectFile($event)">
+                        <label class="custom-file-label" for="customFile">Choose File</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="mb-3">
+                        <button class="btn btn-primary" (click)="upload()">Upload </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <form class="">
+                    <div class="form-inline form-group">
+                        <label class="col-2" for="title">Title</label>
+                        <input type="text" id="title" maxlength="80" class="form-control mx-sm-3" aria-describedby="title">
+                    </div>
+                    <div class="form-inline form-group">
+                        <label class="col-2" for="desc">Description</label>
+                        <textarea id="desc" class="form-control mx-sm-3" maxlength="144" rows="4" cols="30"></textarea>
+                    </div>
+                    <div class="form-inline form-group">
+                        <label class="col-2" for="tags">Tags</label>
+                        <textarea id="tags" class="form-control mx-sm-3" rows="4" cols="30"></textarea>
+                    </div>
+                    <div class="form-inline">
+                        <button type="button" class="btn btn-primary" [disabled]="!firstImage" style="background-color:#704214;"(click)="applySepia()">Sepia</button>
+                        <button type="button" class="btn btn-secondary" [disabled]="!firstImage" style="background-color: grey;" (click)="applyGreyScale()">Grey</button>
+                        <button type="button" class="btn btn-success" [disabled]="!firstImage" (click)="incBrightness()">Brightness</button>
+                        <button type="button" class="btn btn-info" [disabled]="!firstImage" (click)="incContrast()">Contrast</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+
+        <div class="col-md-4">
+          <div class="drag-container" appDrag (files)="filesDropped($event)">
+                <p *ngIf="!firstImage">Drag and drop here and click on upload</p>
+                
+                    <div class="">
+                    
+                        <div class="img-video-div" *ngIf="firstImage">
+                            <!-- <img *ngIf="firstImage.type == 'img'" [src]="firstImage.url" /> -->
+                            <img id="imgUploaded" *ngIf="isImage" [src]="firstImage.url" >
+                            <video id="videoUploaded" *ngIf="isVideo" [src]="firstImage.url"></video>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div style="margin-left: auto;">
+                    <div *ngIf="notCorectFormat" class="alert alert-warning" role="alert">
+                        Please upload Image or Video
+                       </div>
+                    </div>
+        </div>
+        
+    
+    </div>
+
+
+</div>

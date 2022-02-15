@@ -1,0 +1,48 @@
+.mat-sidenav-container {
+  height: 100%;
+}
+
+$sidenav-width: 320px; // 240px;
+
+.mat-sidenav {
+  width: $sidenav-width;
+}
+
+.toolbar-title {
+  margin: 0 16px 0 16px;
+}
+
+.mat-subheader {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.app-nav-list-icon {
+  margin: 0 12px 0 12px;
+  background: black;
+}
+
+.foo {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+}
+.mat-toolbar.mat-primary {
+  background: black;
+  color: #fff;
+}
+
+.my-toolbar {
+  background: black;
+  color: #fff;
+}
+
+.my-subheader-one {
+  background: #B2E8FF;
+  color: #00B4FF;
+}
+
+.my-subheader-two {
+  background: #19BCFF;
+  color: #fff;
+}

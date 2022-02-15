@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="over">
+
+    <mat-toolbar class="my-toolbar">
+      <mat-toolbar-row>
+        <h2> FSD PIXO App </h2>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-nav-list>
+
+      <h2 matSubheader> <a href="/homepage"> Actions</a> </h2>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader> <a href="/picture-gallery"> Gallery </a> </h2>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader> <a href="/upload-picture">Upload Piture</a> </h2>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader> <a href="/subscribers-list">Subscribers List</a> </h2>
+
+      <mat-divider></mat-divider>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-toolbar
+      (toggleSidenav)="sidenav.toggle()">
+    </app-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

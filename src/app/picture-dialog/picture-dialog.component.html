@@ -1,0 +1,34 @@
+<div id="dialog-div" style="overflow: scroll; max-height: 800px;">
+  <div>
+    <h1>{{data.picName}}</h1>
+  </div>
+  <br>
+  <div>
+  <!-- <app-img-wrapper [src]="data.pic" [parentStyle]="parentStyle"></app-img-wrapper> -->
+</div>
+<br>
+
+<div>
+  <h2>Comments List</h2>
+  <div *ngFor="let comment of comments" class="panel panel-warning">
+    <br>
+    <div class="panel-heading">
+      <h4 class="panel-title">Comment #{{comment.index}}</h4>
+    </div>
+    <div class="panel-body">
+      Comment text: {{comment.comment}}
+    </div>
+    <!-- <mat-divider></mat-divider> -->
+  </div>
+</div>
+  <br>
+  <div align="center" class="form-group">
+    <form formGroup="myForm" (ngSubmit)="addComment(myForm.value)">
+      <textarea class="form-control" matInput placeholder="Leave a comment" formControl="myForm.controls['newComment']"></textarea>
+
+      <div>
+        <button mat-raised-button class="btn btn-primary btn-block toolbar-bg" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

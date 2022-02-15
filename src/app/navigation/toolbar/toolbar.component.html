@@ -1,0 +1,56 @@
+<mat-toolbar color="red" *ngIf="authService.currentUserSubject | async" class="pixogram-toolbar">
+
+  <mat-toolbar-row>
+
+    <!-- <button mat-icon-button (click)="toggleSidenav.emit()">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+
+    <!--span> {{ 'APP_TOOLBAR_TITLE' | translate }} </span-->
+    <span>FSD PIXO App</span>
+
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" >
+
+      <ul fxLayout fxLayoutGap="20px" style="padding: 8px;">
+
+        <!-- <li fxHide.xs>
+          <button mat-icon-button (click)="routes.navigate(['/profile'])" matTooltip="Profile">
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li> -->
+
+        <!-- <li fxHide.xs>
+          <button mat-icon-button>
+            <mat-icon matTooltip="Help">help_outline</mat-icon>
+          </button>
+        </li> -->
+
+        <!-- <li> -->
+          <!-- <button mat-icon-button [matMenuTriggerFor]="auth" matTooltip="Logout">
+            <mat-icon>person_outline</mat-icon>
+          </button> -->
+          <!-- <mat-menu #auth="matMenu">
+            <div *ngIf="username">{{username}}</div>
+            <br> -->
+            <!-- <button mat-menu-item (click)="logout()">SignOut</button> -->
+              <!-- <mat-icon>exit_to_app</mat-icon>
+              <span>Sign out</span> -->
+              <!-- <button class="btn btn-lg btn-primary btn-block toolbar-bg float-right" type="submit" (click)="logout()">LogOut</button> -->
+          <!-- </mat-menu> -->
+        <!-- </li> -->
+
+      </ul>
+
+    </div>
+
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<nav mat-tab-nav-bar class="mat-tab-labels" mat-align-tabs="center" *ngIf="authService.currentUserSubject | async">
+  <button mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive"
+    [ngClass]="rla.isActive === true ? 'mat-button-bg-active' :  'mat-button-bg-notactive'">
+    {{link.label}}
+  </button>
+</nav>
